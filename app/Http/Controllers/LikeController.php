@@ -38,7 +38,7 @@ class LikeController extends Controller
     {
         //
         like::insert([
-            'id'=>request('id')
+            'id' => request('id'),
         ]);
     }
 
@@ -51,7 +51,7 @@ class LikeController extends Controller
     public function show(like $like)
     {
         //
-        like::find($like)
+        like::find($like);
     }
 
     // /**
@@ -75,7 +75,7 @@ class LikeController extends Controller
     public function update(Request $request, like $like)
     {
         //
-        $like::update([ 'username' => request('name') ]);
+        $like::update(['username' => request('name')]);
     }
 
     /**
